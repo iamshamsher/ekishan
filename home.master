@@ -1,0 +1,308 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="home.master.cs" Inherits="home" %>
+
+
+
+<!DOCTYPE html>
+<html>
+	<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ascii" /><!-- /Added by HTTrack -->
+<head>
+		<title>ramgovind group of colleges</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<!-- Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.fancybox1036.css?v=2.1.1" media="screen" />
+
+		<!-- Google web fonts -->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow">
+		
+		<!-- JS -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/custom.js"></script>
+		<script src="js/ender.min.js"></script>
+		<script src="js/selectnav.js"></script>
+		<script src="js/jquery.flexslider.js"></script>
+		<script type="text/javascript" src="js/jquery.fancybox1036.js?v=2.1.1"></script>
+		<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tweet.js"></script>
+		<script>
+		    jQuery(document).ready(function () {
+		        /* Flex Slider Call For home page 01*/
+		        $('.flexslider').flexslider({
+		            directionNav: false,
+		            pauseOnAction: false
+		        });
+
+		        /* Jcarousel Call */
+		        jQuery('#testimonials-carousel').jcarousel({
+		            auto: 6,
+		            wrap: 'last',
+		            scroll: 1,
+		            visible: 1,
+		            initCallback: mycarousel_initCallback
+		        });
+		        function mycarousel_initCallback(carousel) {
+		            // Disable autoscrolling if the user clicks the prev or next button.
+		            carousel.buttonNext.bind('click', function () {
+		                carousel.startAuto(0);
+		            });
+		            carousel.buttonPrev.bind('click', function () {
+		                carousel.startAuto(0);
+		            });
+		            // Pause autoscrolling if the user moves with the cursor over the clip.
+		            carousel.clip.hover(function () {
+		                carousel.stopAuto();
+		            }, function () {
+		                carousel.startAuto();
+		            });
+		        };
+		    });
+		</script>
+	</head>
+	<body>
+		<!-- Begin Top Navigation -->
+		<div id="top-navigation-wrapper">
+			<!-- Begin Container -->
+			<div class="container">
+				<div class="eight columns">
+					<!-- Begin Top Navigation Left -->
+					<div id="top-navigation-left">
+						<%--<ul>
+							<li><a href="Default.html"> Home</a> </li>
+							<li><a href="Default.html"> Blog </a> </li>
+							<li><a href="Default.html"> Contact Us </a> </li>
+						</ul>--%>
+					</div>
+                     
+					<!-- End Top Navigation Left -->
+				</div>
+				<div class="eight columns">
+					<!-- Begin Top Navigation Right -->
+					<div id="top-navigation-right">
+						<p>E-AGRICULTURE.</p>
+					</div>
+				<!-- End Top Navigation Right -->
+                    
+				</div>
+			</div>
+			<!-- End Container -->
+		</div>
+		<!-- End Top Navigation -->
+		
+		<!-- Begin Wrapper -->
+		<div id="wrapper">
+			<!-- Begin Container -->
+			<div class="container">
+				<!-- Begin Header -->
+				<div id="header">
+					<!-- Begin Logo -->
+					<div class="eight columns">
+						<div id="logo">
+							<a href="index.html"><img src="logo.jpg" alt="E-agriculture"></a>
+						</div>
+					</div>
+					<!-- End Logo -->
+					
+					<!-- Begin Social & Contact -->
+					<div class="eight columns">
+						<!-- Social Icons -->
+						<ul class="social-icons">
+							
+						</ul>
+						<div class="clear"></div>
+						<!-- Begin Contact Details -->
+						<div id="contact-details">
+							<ul>
+								<li id="support">
+									<a href="#">sammd92@gmail.com</a>
+								</li>
+								<li id="cell">
+									9973629861
+								</li>
+							</ul>
+						</div>
+						<!-- End Contact Details -->
+					</div>
+				   <!-- End Social & Contact -->
+				</div>
+				<!-- End Header -->  
+			
+				<!-- Begin Navigation -->
+				<div class="sixteen columns">
+					<div id="navigation">
+						<ul id="nav">
+							<li><a id="current-menu-item" href="Default.aspx">Home</a>
+								
+							</li>
+							<li><a href="login.aspx"> 	LOGIN	</a>
+								
+										
+									</li>
+								
+							
+							<li><a href="Default.aspx"> 	Registration 	</a></li>
+								
+							
+							<%--<li><a href=""> 	KCC 		</a>--%>
+								
+							</li>
+							
+							
+                                                     
+							<li><a href="Admin.aspx"> 	Admin Login	</a></li>
+                                                         <li><a href="Help.aspx"> 	HELP	</a></li>
+                                                         <%--<li><a href=""> 	COMPLAIN	</a></li>--%>
+						</ul>
+						<!-- Begin Search Form -->
+						<div class="search-form">
+							<form method="get" action="#">
+								<input type="text" class="search-text-box">
+							</form>
+						</div>
+						<!-- End Search Form -->
+					</div>
+					<div class="clear"></div>
+					
+				</div>
+				<!-- End Navigation -->
+			</div>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+			<!-- End Container -->
+			
+			<!-- Begin Container -->
+			    <div class="container">
+				<!-- Begin Flex Slider -->
+				    <div class="sixteen columns">
+                        <div class="slider">
+                            <div class="flexslider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="img/slider_01.jpg" alt="" />
+                                        <div class="slide-description">
+                                            <p>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="img/slider_02.jpg" alt="" /></a>
+                                        <div class="slide-description">
+                                            <p>
+                                                Speech delivered by shamsher alam at fresher party
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="img/slider_03.jpg" alt="" />
+                                        <div class="slide-description">
+                                            <p>
+                                                Civil</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="img/slider_04.jpg" alt="" />
+                                        <div class="slide-description">
+                                            <p>
+                                                Electonics nd communication engineers practical.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+				<!-- End Flex Slider -->
+			    </div>
+			<!-- End Container -->
+			
+			<!-- Begin Container -->
+			    <div class="container">
+                    <div class="sixteen columns">
+					<!-- Begin contact us box -->
+					    <div class="contact-us-box">
+                            <div class="about-us-box">
+                                <h3><b>E-AGRICULTURE<b/></h3>
+                                <p>
+                                    A crop is "a plant or animal or plant or animal product that can be grown and harvested extensively for profit or subsistence."[1] Crop may refer either to the harvested parts or to the harvest in a more refined state (husked, shelled, etc.). Most crops are cultivated in agriculture or aquaculture.</p>
+                            </div>
+                            <div class="clearfix">
+                            </div>
+                        </div>
+					<!-- End contact us box -->
+				    </div>
+                </div>
+                </b></b>
+				
+				<!-- Begin Testimonials -->
+				<div class="one-third column">
+                    <div class="who-we-are-box">
+&nbsp;<ul id="testimonials-carousel" class="jcarousel-skin-RAMGOVIND GROUP OF COLLAGES">
+                            <li>
+                                <div class="testimonial-wrapper">
+                                    <div class="arrow-down">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testimonial-wrapper">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testimonial-wrapper">
+                                    <div class="arrow-down">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				
+				<!-- End Testimonials -->
+				
+				<!-- Begin Services Offering -->
+				
+				<!-- End Services Offering -->
+			    </div>
+			<!-- End Container -->
+			
+			<!-- Begin Why Choose Us -->
+			<!-- Begin Container -->
+			    <div class="container">
+				<!-- Begin Services -->
+				    <div class="one-third column">
+                        <div class="column-service-wrapper">
+                            <div class="column-service-title-wrapper">
+                                <div class="clear">
+                                </div>
+                            </div>
+                            <div class="column-service-read-more ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+				<!-- Begin Services -->
+				    <div class="one-third column">
+                        <div class="column-service-wrapper">
+                            <div class="column-service-title-wrapper">
+                                <div class="column-service-image ">
+                                </div>
+                            </div>
+			<!-- End Container -->
+			<!-- End Why Choose Us -->
+			
+			<!-- Being Recent Work -->
+			<!-- Begin Container -->
+			<!-- End Container -->
+			<!-- End Recent Project -->
+			
+		                </div>
+                    
+		<!-- End Wrapper -->
+		
+		<!-- Begin Footer -->
+                    </div>
+            </asp:ContentPlaceHolder>
+		<!-- End Footer -->
+			
+    </body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ascii" /><!-- /Added by HTTrack -->
+</html>
